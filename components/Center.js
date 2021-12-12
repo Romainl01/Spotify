@@ -54,7 +54,7 @@ function Center() {
         </div>
       </header>
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black from-${color} h-80
+        className={`flex items-end space-x-7 bg-gradient-to-b from-${color} to-black  h-80
       text-white p-8 `}
       >
         <img

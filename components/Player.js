@@ -66,7 +66,7 @@ function Player() {
 
     useEffect(() => {
         if(spotifyApi.getAccessToken() && !currentTrackId) {
-            // I want to fetch the song ingo 
+            // I want to fetch the song info 
         fetchCurrentSong();
         setVolume(50);
 
