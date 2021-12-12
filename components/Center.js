@@ -1,4 +1,3 @@
-import { ChevronDownIcon } from "@heroicons/react/outline";
 import { useSession } from "next-auth/react";
 import { shuffle } from "lodash";
 import { useEffect, useState } from "react";
@@ -8,13 +7,13 @@ import useSpotify from "../hooks/useSpotify";
 import Songs from "./Songs";
 
 const colors = [
-  "indigo-400",
-  "red-400",
-  "blue-400",
-  "green-400",
-  "yellow-400",
-  "pink-400",
-  "purple-400",
+  "from-indigo-400",
+  "from-red-400",
+  "from-blue-400",
+  "from-green-400",
+  "from-yellow-400",
+  "from-pink-400",
+  "from-purple-400",
 ];
 
 function Center() {
@@ -27,6 +26,8 @@ function Center() {
   useEffect(() => {
     setColor(shuffle(colors).pop());
   }, [playlistId]);
+
+  // console.log(color);
 
   useEffect(() => {
     spotifyApi
@@ -43,7 +44,7 @@ function Center() {
       <header className="absolute top-5 right-8">
         <div
           className={`flex items-center bg-black text-white space-x-3 opacity-90 hover:opacity-80
-        cursor-pointer rounded-full p-1 pr-2 border-2 border-${color}`}
+        cursor-pointer rounded-full p-1 pr-2 border-2 `}
         >
           <img
             className="rounded-full w-10 h-10"
@@ -54,7 +55,7 @@ function Center() {
         </div>
       </header>
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b from-${color} to-black  h-80
+        className={`flex items-end space-x-7 bg-gradient-to-b  to-black ${color} h-80
       text-white p-8 `}
       >
         <img
